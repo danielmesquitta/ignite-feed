@@ -2,6 +2,7 @@ import { Header } from './components/Header';
 import { Sidebar } from './components/Sidebar';
 import './global.css';
 import styles from './App.module.css';
+import { Post } from './components/Post';
 
 export const App: React.FC = () => {
   return (
@@ -11,7 +12,9 @@ export const App: React.FC = () => {
       <div className={styles.wrapper}>
         <Sidebar />
 
-        <main></main>
+        <main>
+          <Post />
+        </main>
       </div>
     </div>
   );
