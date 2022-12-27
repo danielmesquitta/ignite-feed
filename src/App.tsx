@@ -3,6 +3,7 @@ import { Sidebar } from './components/Sidebar';
 import './global.css';
 import styles from './App.module.css';
 import { Post } from './components/Post';
+import { posts } from './data/posts';
 
 export const App: React.FC = () => {
   return (
@@ -13,7 +14,9 @@ export const App: React.FC = () => {
         <Sidebar />
 
         <main>
-          <Post />
+          {posts.map((post) => (
+            <Post key={post.id} {...post} />
+          ))}
         </main>
       </div>
     </div>
